@@ -1,0 +1,26 @@
+
+*{ /*Nollställer default margin samt padding + sätter spelets font */
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+}
+
+main{
+    width: 100%;
+    background-color: rgb(240, 193, 107);
+    padding: 1rem;
+}
+
+/*Hanterar skärmstorlekar - NTS Eget dokument om de blir större*/
+@media(min-width: 48em){
+    main{
+        width: 45rem;
+        margin: auto;
+    }
+}
+
+@media(min-width: 62em){
+    main{
+        width: 57.5rem;
+    }
+}
