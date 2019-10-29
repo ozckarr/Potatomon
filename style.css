@@ -2,31 +2,75 @@
 *{ /*Nollställer default margin samt padding + sätter spelets font */
     margin: 0;
     padding: 0;
-    /*font-family: 'Indie Flower', cursive;*/
+    font-family: 'Neucha', cursive;
 }
 
 body{
     background-image: url(./img/background.jpg);
     background-repeat: repeat;
     background-size: 20rem;
+    margin: 1rem 0 0 0;
 }
 
-main{
-    width: 100%;
+.container{
+    width: 20rem;
+    margin: auto;
     background-color: rgb(240, 193, 107);
-    padding: 1rem;
+    border-radius: 3rem;
+    border: 0.5rem solid rgb(68, 46, 6);
+    box-shadow: 0.7rem 0.7rem 0.7rem black;
+    text-align: center;
+    align-content: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+
+#eventImage{
+    background-image: url('./img/potatomon_logo.svg');
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+#playerInput{
+    height: 2rem;
+    padding: 0.3rem;
+    width: 10rem;
+    margin: 0.3rem;
+    border: 0.2rem solid rgb(68, 46, 6); 
+    font-size: 1rem;
+}
+
+#playerButton{
+    -webkit-appearance: none;
+    height: 3rem;
+    width: 5rem;
+    padding: 0.3rem;
+    background-color: rgb(238, 210, 158);
+    border-radius: 1.5rem;
+    border: 0.2rem solid rgb(68, 46, 6); 
+    font-size: 1rem;
 }
 
 /*Hanterar skärmstorlekar - NTS Eget dokument om de blir större*/
-@media(min-width: 48em){
-    main{
-        width: 45rem;
-        margin: auto;
+
+@media(min-width: 34em){
+    .container{
+        width: 30rem;
     }
 }
 
+@media(min-width: 48em){
+    .container{
+        width: 45rem;
+    }
+}
+
+
 @media(min-width: 62em){
-    main{
-        width: 57.5rem;
+    .container{
+        width: 54.5rem;
     }
 }
