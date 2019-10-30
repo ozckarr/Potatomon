@@ -212,25 +212,137 @@ function event9() {
 }
 
 /**
- * Event 10 - Detour
+ * Event 10 - Split paths
  */
 function event10() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
     if(playerInput == '1'){
-        image.style.backgroundImage = "url('./img/x.svg')";
+        image.style.backgroundImage = "url('./img/x.svg')";     /**Sagan ändras... */
         gameTexts.innerHTML = 'Där skådar ni en liten, liten potatis. Den börjar att tala. <br> <b>Lilla Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Mellan Potatisen Bruse istället.</q><br>  <br> 1. Puckla på Lilla Potatisen Bruse<br> 2. Gå förbi Lilla Potatisen Bruse.';
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/x.svg')";
         gameTexts.innerHTML = 'Nä men!? Där var ju en hiss <br> 1. Gå in i hissen <br> 2. Fortsätt att leta.';
+        button.onclick = datingsim1;
+
     }else{
         image.style.backgroundImage = "url('./img/fattarinte.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va. Hur tänkte du nu? </q><br>  <br> 1. Fortsätt över bron <br> 2. Undersök omvägar i trakten.';
         button.onclick = event10;
-                                                                                                                                    
+                                                                                                                                     
     }
 }
 
+/**
+ * Dating Sim 1
+ */
 
+function datingsim1() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    if(playerInput == '1'){
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = '<b>Professorn:</b>-<q> Uff, den se trång ut. Ta din potatis och åk utan mig. </q><br>  <br> 1. Gå in i hissen <br> 2. Leta efter andra omvägar i trakten';
+        button.onclick = datingsim2;
+
+    }else if(playerInput == '2'){ 
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = 'Nä men!? Där var ju en hiss. Det är trångt. Men du och din potatis får plats. <br> 1. Gå in i hissen <br> 2. Leta efter andra omvägar i trakten';
+        button.onclick = datingsim2;
+    }else{
+        image.style.backgroundImage = "url('./img/fattarinte.svg')";
+        gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va? Vad vill du göra. </q><br>  <br> 1. Gå in i hissen <br> 2. Leta efter andra omvägar i trakten.';
+        button.onclick = datingsim2;
+                                                                                                                                     
+    }
+}
+
+/**
+ * Dating Sim 2 - GO INTO THE ELEVATOR
+ */
+
+function datingsim2() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    if(playerInput == '1'){
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = 'Hissen åker neråt.  <br> 1. Vänta <br>';
+        button.onclick = datingsim3;
+    }else if(playerInput == '2'){ 
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = 'Det ser tomt ut runtomkring. <br> 1. Ta hissen';
+        button.onclick = datingsim3;
+    }else{
+        image.style.backgroundImage = "url('./img/fattarinte.svg')";
+        gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va? Vet inte riktigt vad du menar? </q><br>  <br> 1. Okej, jag tar med mig potatisen på en hisstur <br> 2. Okej, potatisen och jag tar en hisstur.';
+        button.onclick = datingsim3;
+                                                                                                                                     
+    }
+}
+
+/**
+ * Dating Sim 3 - Waiting in the elevator
+ */
+
+function datingsim3() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    if(playerInput == '1'){
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = 'Hissen åker neråt. Tiden går...  <br> 1. Vänta <br> 2. Fråga potatisen -<q> Sååå hänger du här ofta?</q><br>';
+        button.onclick = datingsim4;
+    }else{
+        image.style.backgroundImage = "url('./img/fattarinte.svg')";
+        gameTexts.innerHTML = 'Hissen åker neråt. Tiden går...  <br> 1. Vänta <br> 2. Fråga potatisen -<q> Sååå hänger du här ofta?</q><br>';
+        button.onclick = datingsim4;
+                                                                                                                                     
+    }
+}
+
+/**
+ * Dating Sim 4 - The dating game begins
+ */
+
+function datingsim4() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    if(playerInput == '1'){
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = '<b>Potatis:</b>-<q> Nåväl. Mitt namn är Sakura-san. Jag flyttade nyligen hit till källaren för att finna lyckan.</q>  <br> 1. Så du är en fast potatis... Då antar jag att du är sorten Princess. <br> 2. Du var då en het potatis. Men jag kommer nog ändå inte att undvika dig. <br> 3. Du hade passat både som en måling och som Pommes Frites. I olja.';
+        button.onclick = datingsim5;
+    }else if(playerInput == '2'){ 
+        image.style.backgroundImage = "url('./img/x.svg')";
+        gameTexts.innerHTML = 'Nä men!? Där var ju en hiss. Det är trångt. Men du och din potatis får plats. <br> 1. Gå in i hissen <br> 2. Leta efter andra omvägar i trakten';
+        button.onclick = datingsim4;
+    }else{
+        image.style.backgroundImage = "url('./img/fattarinte.svg')";
+        gameTexts.innerHTML = 'Inget händer. Hissen fortsätter åka. Tiden går... </q><br> 1. Vänta <br>2. Fråga potatisen -<q> Sååå hänger du här ofta?</q><br>';
+        button.onclick = datingsim4;
+                                                                                                                                     
+    }
+}
+
+/**
+ * Dating Sim 5 - You say something stupid
+ */
+
+function datingsim5() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    if(playerInput == '1'||'2'||'3'){
+        image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
+        gameTexts.innerHTML = '<b>Professorn:</b> -<q> Typiskt. Det var dess enda svaghet. <br> Nåväl, kom så går vi. </q> <br> 1. Följ med. <br> 2. Häng med. <br> 3. Anslut dig till professorns framfart.<br>';
+        button.onclick = event7;
+    }else{
+        image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
+        gameTexts.innerHTML = '<b>Professorn:</b> -<q> Typiskt. Det var dess enda svaghet. <br> Nåväl, kom så går vi. </q> <br> 1. Följ med. <br> 2. Häng med. <br> 3. Anslut dig till professorns framfart.<br>';
+        button.onclick = event7;
+    }
+}
