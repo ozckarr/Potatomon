@@ -1,18 +1,18 @@
 
-*{ /*Nollställer default margin samt padding + sätter spelets font */
+*{ /*reset default margin and padding + sets the game font */
     margin: 0;
     padding: 0;
     font-family: 'Neucha', cursive;
 }
 
-body{
+body{ /*Background*/
     background-image: url(./img/background.jpg);
     background-repeat: repeat;
     background-size: 20rem;
     margin: 1rem 0 0 0;
 }
 
-.container{
+.container{ /* Styles the game window */
     width: 20rem;
     margin: auto;
     background-color: rgb(240, 193, 107);
@@ -25,7 +25,7 @@ body{
     font-size: 1.5rem;
 }
 
-#eventImage{
+#eventImage{ /* Set size for game image - the image will change */
     background-image: url('./img/potatomon_logo.svg');
     height: 16rem;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body{
 }
 
 
-#playerInput{
+#playerInput{ /* Textbox styling */
     height: 2rem;
     padding: 0.3rem;
     width: 10rem;
@@ -43,7 +43,7 @@ body{
     font-size: 1rem;
 }
 
-#playerButton{
+#playerButton{ /* Button styling */
     -webkit-appearance: none;
     height: 3rem;
     width: 5rem;
@@ -54,7 +54,7 @@ body{
     font-size: 1rem;
 }
 
-/*Hanterar skärmstorlekar - NTS Eget dokument om de blir större*/
+/* Handle screensize*/
 
 @media(min-width: 34em){
     .container{

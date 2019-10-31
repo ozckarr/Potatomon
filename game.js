@@ -30,7 +30,8 @@ function event1() {
     if(playerInput == '1'){
         image.style.backgroundImage = "url('./img/highscore1.svg')";
         gameTexts.innerHTML = 'Oj va originellt. Allt visade sig vara en dröm...';
-
+        button.value = 'Börja Om';
+        button.onclick = restartGame;
 
     }else if(playerInput == '2'){
         image.style.backgroundImage = "url('./img/valtpotatis.svg')";
@@ -120,7 +121,7 @@ function event5() {
     const gameTexts = document.getElementById('gameTexts');
 
     if(playerInput == '1'||'2'||'3'){
-        image.style.backgroundImage = "url('./img/proff-attack.svg')";
+        image.style.backgroundImage = "url('./img/proff-attack3.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Åh Nej. Mjölig Potatis! Gör Pommes Château de la Morte. </q> <br><br> 1. Fast Potatis. Gör Krokett Bomb! <br> 2. Fast Potatis. Gör Rösti Slam! <br> 3. Fast Potatis. Gör Chips Beam! <br>';
         button.onclick = event6;
     }else{
@@ -140,7 +141,7 @@ function event6() {
 
     if(playerInput == '1'||'2'||'3'){
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
-        gameTexts.innerHTML = '<b>Professorn:</b> -<q> Typiskt. Det var dess enda svaghet. <br> Nåväl, kom så går vi. </q> <br><br> 1. Följ med. <br> 2. Häng med. <br> 3. Anslut dig till professorns framfart.<br>';
+        gameTexts.innerHTML = '<b>Professorn:</b> -<q> Typiskt. Det var dess enda svaghet. <br> Hej, kom så går vi. </q> <br><br> 1. Följ med. <br> 2. Häng med. <br> 3. Anslut dig till professorns framfart.<br>';
         button.onclick = event7;
     }else{
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
@@ -379,9 +380,23 @@ function datingsim8() {
     if(playerInput == '1'||'2'||'3'){
         image.style.backgroundImage = "url('./img/highscore2.svg')";
         gameTexts.innerHTML = '....Och ni levde lyckligt i alla era dagar';
+        button.value = 'Börja Om';
+        location.reload();
+
         
     }else{
         image.style.backgroundImage = "url('./img/highscore2.svg')";
         gameTexts.innerHTML = '....Och ni levde lyckligt i alla era dagar.';
+        button.value = 'Börja Om';
+        location.reload();
+
     }
+}
+
+/**
+ * Restarts the game
+ */
+
+function restartGame() {
+    location.reload();
 }
