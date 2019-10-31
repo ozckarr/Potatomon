@@ -103,7 +103,7 @@ function datingsim4() {
                                 ' 3. Du hade passat både som en måling och som Pommes Frites. I olja.';
         button.onclick = datingsim5;
     }else if(playerInput == '2'){ 
-        image.style.backgroundImage = "url('./img/hissner-dating1.svg')";
+        image.style.backgroundImage = "url('./img/inihiss.svg')";
         gameTexts.innerHTML = 'Nä men!? Där var ju en hiss. Det är trångt. Men du och din potatis får plats. <br><br>' + 
                                 ' 1. Gå in i hissen <br> ' +
                                 ' 2. Leta efter andra omvägar i trakten';

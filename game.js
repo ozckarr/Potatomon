@@ -215,7 +215,7 @@ function event8() {
         image.style.backgroundImage = "url('./img/tittapabro.svg')";
         gameTexts.innerHTML = 'Ni går på bron. Där skådar något i fjärran.<br><br>' + 
                                 '1. Fortsätt <br> 2. Fly';
-        button.onclick = event9;
+    button.onclick = event9;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/tittatnagot.svg')";
@@ -228,6 +228,7 @@ function event8() {
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va. Hur tänkte du nu? </q> <br><br>' + 
                                 ' 1. Gå till bron <br>' + 
                                 ' 2. Försök att hitta en omväg.';
+        button.onclick = event8;
                                                                                                                                     
     }
 }
@@ -242,11 +243,12 @@ function event9() {
     const gameTexts = document.getElementById('gameTexts');
 
     if(playerInput == '1'){
-        image.style.backgroundImage = "url('./img/lillapotatisenbruse.svg')";     /**Sagan ändras... */
+        image.style.backgroundImage = "url('./img/lillapotatisenbruse.svg')";     
         gameTexts.innerHTML = 'Där skådar ni en liten, liten potatis. Den börjar att tala. <br> ' + 
                                 '<b>Lilla Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Mellan Potatisen Bruse istället.</q> <br><br> ' + 
                                 ' 1. Puckla på Lilla Potatisen Bruse<br>' + 
                                 ' 2. Gå förbi Lilla Potatisen Bruse.';
+        button.onclick = bridge1;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/hittahiss.svg')";
