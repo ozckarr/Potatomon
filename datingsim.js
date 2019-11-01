@@ -100,7 +100,7 @@ function datingsim4() {
         gameTexts.innerHTML = '<b>Potatis:</b>-<q> Nåväl. Mitt namn är ポテト-san. Jag flyttade nyligen hit till källaren för att finna lyckan.</q>  <br><br>' + 
                                 ' 1. Så du är en fast potatis... Då antar jag att du är sorten Princess. <br>' + 
                                 ' 2. Du var då en het potatis. Men jag kommer nog ändå inte att undvika dig. <br>' + 
-                                ' 3. Du hade passat både som en måling och som Pommes Frites. I olja.';
+                                ' 3. Du hade passat både som en målning och som Pommes Frites. I olja.';
         button.onclick = datingsim5;
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/inihiss.svg')";

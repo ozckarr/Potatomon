@@ -87,7 +87,7 @@ function bridge3() {
 }
 
 /**
- * Bridge 4 - You evolve to the superspud and ar sent to supotatis.js
+ * Bridge 4 - You evolve to the superspud
  * Note: Yes I could have done this in JS but it was a quick and fun thing
  *  and it would have been copy+paste from the lesson. Instead I learned a
  * new thing in photoshop.
@@ -106,8 +106,8 @@ function bridge4() {
 
     gameTexts.innerHTML = 'Efter att ha spöat Mellan Potatisen Bruse så har din Potatis över 9000 PotatisPoäng®. <br>' + 
                             'Tillräckligt med för att kartoffolveras till <b>Supotatis</b>  <br><br>' + 
-                            ' 1. Fortsätt gå.';
-    button.onclick = supotatis1;
+                            ' 1. Fortsätt.';
+    button.onclick = bridge12;
 }
 
 /**
@@ -222,7 +222,7 @@ function bridge8() {
 }
 
 /**
- * Bridge 8 - Proffesor tr
+ * Bridge 9 - Proffesor returns
  */
 
 function bridge9() {
@@ -236,6 +236,10 @@ function bridge9() {
                             ' 2. Titta upp';
     button.onclick = bridge10;                  
 }
+
+/**
+ * Bridge 10 - Proffessor remind you that you've got the power
+ */
 
 function bridge10() {
     const playerInput = input.value;
@@ -268,6 +272,10 @@ function bridge10() {
     }
 }
 
+/**
+ * Bridge 11 - Proffessor remind you that you've got the power
+ */
+
 function bridge11() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
@@ -281,7 +289,23 @@ function bridge11() {
 
     gameTexts.innerHTML = 'Snart har din Potatis samlat över 9000 PotatisPoäng®. <br>' + 
                             'Tillräckligt med för att kartoffolveras till <b>Supotatis</b>  <br><br>' +
-                            'Dags att tugga bubbelgum och sparka häck. Och du har slut på bubbelgum. <b>Supotatis</b>  <br><br>' + 
+                            'Dags att tugga bubbelgum och sparka häck. Och du har slut på bubbelgum.  <br><br>' + 
                             ' 1. Fortsätt.';
-    button.onclick = supotatis1;
+    button.onclick = bridge12;
+}
+
+/**
+ * Bridge 12 - You return to the large potato
+ */
+
+function bridge12() {
+    const playerInput = input.value;
+    const gameTexts = document.getElementById('gameTexts');
+
+    image.style.backgroundImage = "url('./img/the-team-return.svg')";
+    gameTexts.innerHTML = 'Ni återvänder till bron.<br><br>' + 
+                            ' 1. Dags att få revanch<br>' + 
+                            ' 2. Visa vart skåpet ska stå<br>' +
+                            ' 3. Försök att förklara för Stora Bocken Bruse att du tog illa upp förra gången<br>';
+    button.onclick = supotatis1;                  
 }

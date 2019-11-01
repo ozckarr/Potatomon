@@ -10,6 +10,13 @@ const input = document.getElementById('playerInput');
 const button = document.getElementById("playerButton");
 
 
+/**
+ * Restarts the game
+ */
+
+function restartGame() {
+    location.reload();
+}
 
 /**
  * This is the first action that will happen in my game
@@ -265,16 +272,4 @@ function event9() {
         button.onclick = event9;
                                                                                                                                      
     }
-}
-
-
-
-
-
-/**
- * Restarts the game
- */
-
-function restartGame() {
-    location.reload();
 }
