@@ -13,13 +13,13 @@ const button = document.getElementById("playerButton");
 /**
  * Restarts the game
  */
-
 function restartGame() {
     location.reload();
 }
 
 /**
- * This is the first action that will happen in my game
+ * This is the first action that will happens in my game
+ * check button.onclick to see where every event sends you
  */
 function submittedPlayerInput() {
     image.style.backgroundImage = "url('./img/dittnamn.svg')";
@@ -27,13 +27,13 @@ function submittedPlayerInput() {
                         '<i>Skriv i siffran för att välja ett svar.</i> <br><br>' + 
                         ' 1. Ta den mjöliga potatisen. Berättelsen slutar. Du vaknar upp i din säng och tror det du vill tro. <br>' +
                         ' 2. Ta den fasta potatisen. Du stannar här, och jag visar dig hur djupt potatiskällaren går.</q>';
-    button.onclick = event1;
+    button.onclick = chooseAPotato;
 }
 
 /**
- * Event1 (Rename) - You choose which potato you want
+ * Here you choose which potato you want
  */
-function event1() {
+function chooseAPotato() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -48,20 +48,20 @@ function event1() {
                                 'Då tar jag den mjöliga.<br>Får jag utmana dig i en potatisfight? </q> <br>' + 
                                 ' 1.Ja <br>' + 
                                 ' 2.Nej';
-        button.onclick = event2;
+        button.onclick = handlePotatoFight;
     }else{
         image.style.backgroundImage = "url('./img/fattarinte.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va? Jag fattar inte. Vilken potatis ville du ha? </q><br><br>' + 
                                 ' 1. Mjölig <br>' +
                                 ' 2. Fast';
-        button.onclick = event1;
+        button.onclick = chooseAPotato;
     }
 }
 
 /**
- * Event2 (Rename) - Did you want a potato battle?
+ * Did you want a potato battle?
  */
-function event2() {
+function handlePotatoFight() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -70,26 +70,26 @@ function event2() {
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Ok. Då kör vi. Mjölig Potatis! Jag väljer dig </q> <br><br> ' + 
                                 ' 1. Fast Potatis. Jag väljer dig! <br>' +
                                 ' 2. Stampa på professorns potatis!';
-        button.onclick = event3;   
+        button.onclick = startPotatoFight;   
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/letsgo.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Ok. Men då kikar vi runt lite här i potatiskällaren. </q> <br><br>' + 
                                 ' 1. Ok';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }else{
         image.style.backgroundImage = "url('./img/fattarinte.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va? Jag fattar inte. Ville du ha en fight? </q><br><br>'+
                                 ' 1. Ja <br>' +
                                 ' 2. Nej';
-        button.onclick = event2;
+        button.onclick = handlePotatoFight;
     }
 }
 
 /**
- * Event 3 Potato fight with the proffesor
+ * Potato fight with the proffesor
  */
 
-function event3() {
+function startPotatoFight() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -99,25 +99,25 @@ function event3() {
                                 ' 1. Fast Potatis. Gör Fry-douken! <br>' + 
                                 ' 2. Fast Potatis. Gör Pytt Fu! <br>' + 
                                 ' 3. Fast Potatis. Gör Jansson Punch!';
-        button.onclick = event4;
+        button.onclick = fightTheProffesor1;
     }else if(playerInput == '2'){
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Hm. Oortodoxt. Men det viktigaste är ju att vinna. Då fortsätter vi ber i potatiskällaren </q> <br><br>' + 
                                 ' 1. Ok';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }else{
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Hm. Oortodoxt. Men det viktigaste är ju att vinna. Då fortsätter vi ber i potatiskällaren </q> <br><br>' + 
                                 ' 1. Ok';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }
 }
 
 /**
- * Event 4 Potato fight with the proffesor part 2
+ * Potato fight with the proffesor part 2
  */
 
-function event4() {
+function fightTheProffesor1() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -127,20 +127,20 @@ function event4() {
                                 ' 1. Fast Potatis. Gör Fry-douken! <br>' + 
                                 ' 2. Fast Potatis. Gör Gratäng Slash! <br>' +
                                 ' 3. Fast Potatis. Gör Paltsengan! <br>';
-        button.onclick = event5;
+        button.onclick = fightTheProffesor1;
     }else{
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Hm. Oortodoxt. Men det viktigaste är ju att vinna. Då fortsätter vi ner i potatiskällaren </q> <br><br>' + 
                                 ' 1. Ok';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }
 }
 
 /**
- * Event 5 Potato fight with the proffesor part 3
+ * Potato fight with the proffesor part 3
  */
 
-function event5() {
+function fightTheProffesor1() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -150,12 +150,12 @@ function event5() {
                                  ' 1. Fast Potatis. Gör Krokett Bomb! <br>' + 
                                  ' 2. Fast Potatis. Gör Rösti Slam! <br> ' + 
                                  ' 3. Fast Potatis. Gör Chips Beam!';
-        button.onclick = event6;
+        button.onclick = fightTheProffesor2;
     }else{
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Hm. Oortodoxt. Men det viktigaste är ju att vinna. Då fortsätter vi ner i potatiskällaren </q> <br><br> ' + 
                                 '1. Ok';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }
 }
 
@@ -163,7 +163,7 @@ function event5() {
  * End of battle  - the journey continues
  */
 
-function event6() {
+function fightTheProffesor2() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -174,47 +174,40 @@ function event6() {
                                 ' 1. Följ med. <br>' + 
                                 ' 2. Häng med. <br>' + 
                                 ' 3. Anslut dig till professorns framfart.<br>';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }else{
         image.style.backgroundImage = "url('./img/oortodoxt-attack1.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b> -<q> Typiskt. Det var dess enda svaghet. <br> Nåväl, kom så går vi. </q> <br><br>' + 
                                 ' 1. Följ med. <br> ' + 
                                 ' 2. Häng med. <br> ' + 
                                 ' 3. Anslut dig till professorns framfart.<br>';
-        button.onclick = event7;
+        button.onclick = afterPotatoFight;
     }
 }
 
 /**
- * Event 7 - You get to a bridge
+ * After the fight. You get to a bridge
  */
 
-function event7() {
+function afterPotatoFight() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
-    if(playerInput == '1'||'2'||'3'){
-        image.style.backgroundImage = "url('./img/hittatbro.svg')";
-        gameTexts.innerHTML = 'Ni beger er ner i potatiskällaren. Ni skådar en bro i fjärran. <br><br>' + 
-                                ' 1. Gå till bron <br> ' + 
-                                ' 2. Försök att hitta en omväg';
-        button.onclick = event8;
-    }else{
-        image.style.backgroundImage = "url('./img/hittatbro.svg')";
-        gameTexts.innerHTML = 'Ni beger er ner i potatiskällaren. Ni skådar en bro i fjärran. <br><br>' + 
-                                ' 1. Gå till bron <br>' +
-                                ' 2. Försök att hitta en omväg';
-        button.onclick = event8;                  
-    }
+    image.style.backgroundImage = "url('./img/hittatbro.svg')";
+    gameTexts.innerHTML = 'Ni beger er ner i potatiskällaren. Ni skådar en bro i fjärran. <br><br>' + 
+                            ' 1. Gå till bron <br>' +
+                            ' 2. Försök att hitta en omväg';
+     button.onclick = chooseBridgeOrDetour1;                  
 }
 
 
 
+
 /**
- * Event 8 - Bridge or detour - second chance
+ * Bridge or detour - second chance
  */
 
-function event8() {
+function chooseBridgeOrDetour1() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -222,30 +215,30 @@ function event8() {
         image.style.backgroundImage = "url('./img/tittapabro.svg')";
         gameTexts.innerHTML = 'Ni går på bron. Där skådar något i fjärran.<br><br>' + 
                                 '1. Fortsätt <br> 2. Fly';
-    button.onclick = event9;
+    button.onclick = chooseBridgeOrDetour2;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/tittatnagot.svg')";
         gameTexts.innerHTML = 'Ni snokar runt lite och tycker er se något bakom en buske. <br><br>' + 
                                 ' 1. Gå tillbaka till bron <br>' + 
                                 ' 2. Undersök';
-        button.onclick = event9;
+        button.onclick = chooseBridgeOrDetour2;
     }else{
         image.style.backgroundImage = "url('./img/fattarinte.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va. Hur tänkte du nu? </q> <br><br>' + 
                                 ' 1. Gå till bron <br>' + 
                                 ' 2. Försök att hitta en omväg.';
-        button.onclick = event8;
+        button.onclick = chooseBridgeOrDetour1;
                                                                                                                                     
     }
 }
 
 /**
- * Event 9 - Split paths
+ * Two paths
  * path 1 continues in bridge.js
  * path 2 continues in datingsim.js
  */
-function event9() {
+function chooseBridgeOrDetour2() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -255,21 +248,21 @@ function event9() {
                                 '<b>Lilla Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Mellan Potatisen Bruse istället.</q> <br><br> ' + 
                                 ' 1. Puckla på Lilla Potatisen Bruse<br>' + 
                                 ' 2. Gå förbi Lilla Potatisen Bruse.';
-        button.onclick = bridge1;
+        button.onclick = handleBruseS;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/hittahiss.svg')";
         gameTexts.innerHTML = 'Nä men!? Där var ju en hiss <br><br>' + 
                                 ' 1. Gå in i hissen <br>' + 
                                 ' 2. Fortsätt att leta.';
-        button.onclick = datingsim1;
+        button.onclick = handleTheElevator;
 
     }else{
         image.style.backgroundImage = "url('./img/fattarinte.svg')";
         gameTexts.innerHTML = '<b>Professorn:</b>-<q> Va. Hur tänkte du nu? </q> <br><br> ' + 
                                 ' 1. Fortsätt över bron <br>' + 
                                 ' 2. Undersök omvägar i trakten.';
-        button.onclick = event9;
+        button.onclick = chooseBridgeOrDetour2;
                                                                                                                                      
     }
 }

@@ -5,7 +5,7 @@
  * Bridge 1 - You handle the small potato
  */
 
-function bridge1() {
+function handleBruseS() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -26,7 +26,7 @@ function bridge1() {
         gameTexts.innerHTML = '<b>Lilla Potatisen Bruse:</b>-<q> Eh, va?</q> <br><br>' + 
                                 ' 1. Puckla på Lilla Potatisen Bruse<br>' + 
                                 ' 2. Gå förbi Lilla Potatisen Bruse.';
-        button.onclick = bridge1;
+        button.onclick = handleBruseS;
                                                                                                                                      
     }
 }
