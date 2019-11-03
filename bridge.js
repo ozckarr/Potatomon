@@ -2,7 +2,7 @@
 
 
 /**
- * Bridge 1 - You handle the small potato
+ * You handle the small potato
  */
 
 function handleBruseS() {
@@ -13,13 +13,13 @@ function handleBruseS() {
         image.style.backgroundImage = "url('./img/lillapotatisenbruse-kicked.svg')";     
         gameTexts.innerHTML = 'Din potatis spöar lilla potatisen Bruse.<br><br>' + 
                                 ' 1. Fortsätt gå.';
-        button.onclick = bridge2;
+        button.onclick = passBruseS;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/lillapotatisenbruse-letgo.svg')";
         gameTexts.innerHTML = 'Du passerar lilla potatisen Bruse.<br><br>' + 
                                 ' 1. Fortsätt gå.';
-        button.onclick = bridge2;
+        button.onclick = passBruseS;
 
     }else{
         image.style.backgroundImage = "url('./img/lillapotatisenbruse-what.svg')";
@@ -32,68 +32,60 @@ function handleBruseS() {
 }
 
 /**
- * Bridge 2 - You encounter a medium potato
+ * You encounter a medium potato
  */
 
-function bridge2() {
+function passBruseS() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
-    if(playerInput == '1'||'2'||'3'){
-        image.style.backgroundImage = "url('./img/mellanpotatisenbruse.svg')";
-        gameTexts.innerHTML = 'Snart skådar ni en medium, medium potatis. Och den börjar också tala...<br>' + 
-                                '<b>Mellan Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Stora Potatisen Bruse istället.</q> <br><br>' + 
-                                ' 1. Puckla på Mellan Potatisen Bruse<br>' + 
-                                ' 2. Gå förbi Mellan Potatisen Bruse';
-        button.onclick = bridge3;
-    }else{
-        image.style.backgroundImage = "url('./img/mellanpotatisenbruse.svg')";
-        gameTexts.innerHTML = 'Snart skådar ni en medium, medium potatis. Och den börjar också tala...<br>' + 
-                                '<b>Mellan Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Stora Potatisen Bruse istället.</q> <br><br>' + 
-                                ' 1. Puckla på Mellan Potatisen Bruse<br>' + 
-                                ' 2. Gå förbi Mellan Potatisen Bruse';
-        button.onclick = bridge3;                  
-    }
+    image.style.backgroundImage = "url('./img/mellanpotatisenbruse.svg')";
+    gameTexts.innerHTML = 'Snart skådar ni en medium, medium potatis. Och den börjar också tala...<br>' + 
+                            '<b>Mellan Potatisen Bruse:</b>-<q> Nej, nej ta inte mig. Ta Stora Potatisen Bruse istället.</q> <br><br>' + 
+                            ' 1. Puckla på Mellan Potatisen Bruse<br>' + 
+                            ' 2. Gå förbi Mellan Potatisen Bruse';
+        button.onclick = handleBruseM;
+
 }
 
 /**
- * Bridge 3 - You handle the medium potato
+ * You handle the medium potato
  */
 
-function bridge3() {
+function handleBruseM() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
     if(playerInput == '1'){
         image.style.backgroundImage = "url('./img/mellanpotatisenbruse-kicked.svg')";     
         gameTexts.innerHTML = 'Din potatis spöar Mellan Potatisen Bruse.<br><br>' + 
-                                ' 1. Fortsätt gå.';
-        button.onclick = bridge4;
+                                ' 1. Fortsätt.';
+        button.onclick = upgradeYourPotato;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/lillapotatisenbruse-letgo.svg')";
         gameTexts.innerHTML = 'Du passerar Mellan Potatisen Bruse.<br><br>' + 
                                 ' 1. Fortsätt gå.';
-        button.onclick = bridge5;
+        button.onclick = passBruseM;
 
     }else{
         image.style.backgroundImage = "url('./img/mellanpotatisenbruse-what.svg')";
         gameTexts.innerHTML = '<b>Mellan Potatisen Bruse:</b>-<q> Eh, va?</q> <br><br>' + 
                                 ' 1. Puckla på Mellan Potatisen Bruse<br>' + 
                                 ' 2. Gå förbi Mellan Potatisen Bruse.';
-        button.onclick = bridge3;
+        button.onclick = handleBruseM;
                                                                                                                                      
     }
 }
 
 /**
- * Bridge 4 - You evolve to the superspud
+ * You evolve to the superspud
  * Note: Yes I could have done this in JS but it was a quick and fun thing
  *  and it would have been copy+paste from the lesson. Instead I learned a
  * new thing in photoshop.
  */
 
-function bridge4() {
+function upgradeYourPotato() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
     image.style.backgroundImage = "url('./img/kartoffelsion.gif')";
@@ -107,14 +99,14 @@ function bridge4() {
     gameTexts.innerHTML = 'Efter att ha spöat Mellan Potatisen Bruse så har din Potatis över 9000 PotatisPoäng®. <br>' + 
                             'Tillräckligt med för att kartoffolveras till <b>Supotatis</b>  <br><br>' + 
                             ' 1. Fortsätt.';
-    button.onclick = bridge12;
+    button.onclick = handleBruseL_upgraded;
 }
 
 /**
- * Bridge 5 - You encounter a large potato
+ * You encounter a large potato
  */
 
-function bridge5() {
+function passBruseM() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -123,14 +115,14 @@ function bridge5() {
                             '<b>Stora Potatisen Bruse:</b>-<q> <b>GLARGHHH!!</b>.</q> <br><br>' + 
                             ' 1. Puckla på Stora Potatisen Bruse<br>' + 
                             ' 2. Gå förbi Stora Potatisen Bruse';
-    button.onclick = bridge6;                  
+    button.onclick = handleBruseL;                  
 }
 
 /**
- * Bridge 6 - You interact with the large potato
+ * You interact with the large potato
  */
 
-function bridge6() {
+function handleBruseL() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -140,7 +132,7 @@ function bridge6() {
                                 '<b>Professorn:</b>-<q> Hm, jag tror att vi borde sticka innan den blir irriterad.<br><br>' +
                                 ' 1. Försök att puckla på Stora Potatisen Bruse igen<br>' + 
                                 ' 2. Fly';
-        button.onclick = bridge7;
+        button.onclick = handleBruseLAgain;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/storapotatisenbruse-kicked.svg')";
@@ -148,23 +140,23 @@ function bridge6() {
                                 '<b>Professorn:</b>-<q> Hm, jag tror att vi borde sticka innan den blir allt för irriterad.<br><br>' +
                                 ' 1. Dra in magen lite mer och kläm er fram hårdare<br>' +
                                 ' 2. Fly' ;
-        button.onclick = bridge7;
+        button.onclick = handleBruseLAgain;
 
     }else{
         image.style.backgroundImage = "url('./img/storapotatisenbruse-what.svg')";
         gameTexts.innerHTML = '<b>Stora Potatisen Bruse:</b>-<q> <b>GRARKHH???</b></q> <br><br>' + 
                                 ' 1. Puckla på Stora Potatisen Bruse<br>' + 
                                 ' 2. Fly.';
-        button.onclick = bridge7;
+        button.onclick = handleBruseLAgain;
                                                                                                                                      
     }
 }
 
 /**
- * Bridge 7 - You and/or the proffesor dies - Flee
+ * You and/or the proffesor dies - Flee
  */
 
-function bridge7() {
+function handleBruseLAgain() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -179,23 +171,23 @@ function bridge7() {
                                 ' <b>Professorn:</b>-<q> <b>AAAAAAAA</B>AAAAAAAAᴀᴀᴀᴀᴀᴀᴀᴀᴬᴬᴬᴬᴬᴬᴬᴬ     <b>*Smäll*</b> <br><br>' +
                                 ' 1. Försök att tala Stora Potatisen Bruse tillrätta<br>' +
                                 ' 2. Fly, fast ännu snabbare' ;
-        button.onclick = bridge8;
+        button.onclick = getAwayFromBluseL;
 
     }else{
         image.style.backgroundImage = "url('./img/storapotatisenbruse-what.svg')";
         gameTexts.innerHTML = '<b>Stora Potatisen Bruse:</b>-<q> <b>GRARKHH???</b></q> <br><br>' + 
                                 ' 1. Ge dig på Stora Potatisen Bruse<br>' + 
                                 ' 2. Fly';
-        button.onclick = bridge7;
+        button.onclick = handleBruseLAgain;
                                                                                                                                      
     }
 }
 
 /**
- * Bridge 7 - Repetition on 8 or going forward mourning the proffesor
+ * Repetition  or going forward mourning the proffesor
  */
 
-function bridge8() {
+function getAwayFromBluseL() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -210,22 +202,22 @@ function bridge8() {
                                 ' 1. Gråt en skvätt <br>' +
                                 ' 2. Skrik till <s>skyarna</s> taket. -<q> <b>ACK, DET SKULLE HA VARIT JAG! OH, GRYMMA ÖDE!</b></q><br>' +
                                 ' 3. Konstatera att situationen är lite tråkig ';
-        button.onclick = bridge9;
+        button.onclick = beSad;
     }else{
         image.style.backgroundImage = "url('./img/storapotatisenbruse-what.svg')";
         gameTexts.innerHTML = '<b>Stora Potatisen Bruse:</b>-<q> <b>GRARKHH???</b></q> <br><br>' + 
                                 ' 1. Försök att tala Stora Potatisen Bruse tillrätta <br>' + 
                                 ' 2. Fly';
-        button.onclick = bridge7;
+        button.onclick = handleBruseLAgain;
                                                                                                                                      
     }
 }
 
 /**
- * Bridge 9 - Proffesor returns
+ * The Proffesor returns
  */
 
-function bridge9() {
+function beSad() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -234,14 +226,14 @@ function bridge9() {
                             '<b>Röst:</b>-<q> <b>SIMBA!</b>.</q> <br><br>' + 
                             ' 1. Du är för sorgsen för att notera något<br>' + 
                             ' 2. Titta upp';
-    button.onclick = bridge10;                  
+    button.onclick = handleSadness;                  
 }
 
 /**
- * Bridge 10 - Proffessor remind you that you've got the power
+ * Proffessor remind you that you've got the power
  */
 
-function bridge10() {
+function handleSadness() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -251,7 +243,7 @@ function bridge10() {
                                 '<b>Röst:</b>-<q> <b>SIMBA!!!</b>.</q> <br><br>' + 
                                 ' 1. Du är för sorgsen för att notera något<br>' + 
                                 ' 2. Titta upp';
-        button.onclick = bridge9;
+        button.onclick = beSad;
 
     }else if(playerInput == '2'){ 
         image.style.backgroundImage = "url('./img/proffessorn-return.svg')";
@@ -260,23 +252,23 @@ function bridge10() {
                                 ' 1. Ni insåg att kraften fanns inom er hela tiden. Efter ett träningsmontage är ni redo<br>' +
                                 ' 2. Du inser att du kan lära Potatis den hemliga ㄗ口匕丹匕工ち-stridstekniken <br>' +
                                 ' 3. Ni går till SuperUltraMega-läget utan att passera Gå';
-        button.onclick = bridge11;
+        button.onclick = findThePower;
     }else{
         image.style.backgroundImage = "url('./img/sorgligt.svg')";
         gameTexts.innerHTML = 'Då hör rösten igen en röst.<br>' + 
                                 '<b>Röst:</b>-<q> <b>SIMBA!!!</b>.</q> <br><br>' + 
                                 ' 1. Du är för sorgsen för att notera något<br>' + 
                                 ' 2. Titta upp';
-        button.onclick = bridge9;
+        button.onclick = handleSadness;
                                                                                                                                      
     }
 }
 
 /**
- * Bridge 11 - Proffessor remind you that you've got the power
+ * Proffessor remind you that you've got the power
  */
 
-function bridge11() {
+function findThePower() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
     image.style.backgroundImage = "url('./img/kartoffelsion.gif')";
@@ -291,14 +283,14 @@ function bridge11() {
                             'Tillräckligt med för att kartoffolveras till <b>Supotatis</b>  <br><br>' +
                             'Dags att tugga bubbelgum och sparka häck. Och du har slut på bubbelgum.  <br><br>' + 
                             ' 1. Fortsätt.';
-    button.onclick = bridge12;
+    button.onclick = handleBruseL_upgraded;
 }
 
 /**
- * Bridge 12 - You return to the large potato
+ * You return to the large potato
  */
 
-function bridge12() {
+function handleBruseL_upgraded() {
     const playerInput = input.value;
     const gameTexts = document.getElementById('gameTexts');
 
@@ -306,6 +298,6 @@ function bridge12() {
     gameTexts.innerHTML = 'Ni återvänder till bron.<br><br>' + 
                             ' 1. Dags att få revanch<br>' + 
                             ' 2. Visa vart skåpet ska stå<br>' +
-                            ' 3. Försök att förklara för Stora Bocken Bruse att du tog illa upp förra gången<br>';
-    button.onclick = supotatis1;                  
+                            ' 3. Försök att förklara för Stora Bocken Bruse att du tog illa upp förra gången';
+    button.onclick = fightBruseL;                  
 }
