@@ -1,4 +1,4 @@
-/** (mjukstart med JSDOC)
+/** 
  * @param {string} eventImage - Story images in the game
  * @param {string} gameTexts - Story texts in the game
  * @param {string} playerInput - Player action in the game
