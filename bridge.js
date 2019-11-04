@@ -2,7 +2,7 @@
 
 
 /**
- * You handle the small potato
+ * The player handle the small potato
  */
 
 function handleBruseS() {
@@ -32,7 +32,7 @@ function handleBruseS() {
 }
 
 /**
- * You encounter a medium potato
+ * The player encounter a medium potato
  */
 
 function passBruseS() {
@@ -49,7 +49,7 @@ function passBruseS() {
 }
 
 /**
- * You handle the medium potato
+ * The player handle the medium potato
  */
 
 function handleBruseM() {
@@ -79,7 +79,7 @@ function handleBruseM() {
 }
 
 /**
- * You evolve to the superspud
+ * The player evolve to the superspud
  * Note: Yes I could have done this in JS but it was a quick and fun thing
  *  and it would have been copy+paste from the lesson. Instead I learned a
  * new thing in photoshop.
@@ -103,7 +103,7 @@ function upgradeYourPotato() {
 }
 
 /**
- * You encounter a large potato
+ * The player encounter a large potato
  */
 
 function passBruseM() {
@@ -119,7 +119,7 @@ function passBruseM() {
 }
 
 /**
- * You interact with the large potato
+ * The player interact with the large potato
  */
 
 function handleBruseL() {
@@ -153,7 +153,7 @@ function handleBruseL() {
 }
 
 /**
- * You and/or the proffesor dies - Flee
+ * The player and/or the proffesor dies - Flee
  */
 
 function handleBruseLAgain() {
@@ -230,7 +230,7 @@ function beSad() {
 }
 
 /**
- * Proffessor remind you that you've got the power
+ * Proffessor remind the player that you've got the power
  */
 
 function handleSadness() {
@@ -265,7 +265,7 @@ function handleSadness() {
 }
 
 /**
- * Proffessor remind you that you've got the power
+ * The players potato upgrades
  */
 
 function findThePower() {
@@ -287,7 +287,7 @@ function findThePower() {
 }
 
 /**
- * You return to the large potato
+ * The player return to the large potato
  */
 
 function handleBruseL_upgraded() {

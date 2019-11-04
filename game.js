@@ -1,4 +1,4 @@
-/** (mjukstart med JSDOC)
+/** 
  * @param {string} eventImage - Story images in the game
  * @param {string} gameTexts - Story texts in the game
  * @param {string} playerInput - Player action in the game
@@ -18,7 +18,7 @@ function restartGame() {
 }
 
 /**
- * This is the first action that will happens in my game
+ * This is the first action that will happens in the game
  * check button.onclick to see where every event sends you
  */
 function submittedPlayerInput() {
@@ -31,7 +31,7 @@ function submittedPlayerInput() {
 }
 
 /**
- * Here you choose which potato you want
+ * the player choose which potato he or she wants
  */
 function chooseAPotato() {
     const playerInput = input.value;
@@ -59,7 +59,7 @@ function chooseAPotato() {
 }
 
 /**
- * Did you want a potato battle?
+ * The player can choose to battle
  */
 function handlePotatoFight() {
     const playerInput = input.value;
@@ -86,7 +86,7 @@ function handlePotatoFight() {
 }
 
 /**
- * Potato fight with the proffesor
+ * The player hav apotato fight with the proffesor
  */
 
 function startPotatoFight() {
@@ -186,7 +186,7 @@ function fightTheProffesor2() {
 }
 
 /**
- * After the fight. You get to a bridge
+ * After the fight. The player gets to a bridge
  */
 
 function afterPotatoFight() {

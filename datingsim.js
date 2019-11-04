@@ -1,6 +1,6 @@
 
 /**
- * the Dating Sim - go into the elevator
+ * The player start the Dating Sim - go into the elevator
  */
 
 function handleTheElevator() {
@@ -16,7 +16,7 @@ function handleTheElevator() {
 }
 
 /**
- * GOINTO THE ELEVATOR
+ * Forces the player into the elevator
  */
 
 function goIntoTheElevator() {
@@ -44,7 +44,7 @@ function goIntoTheElevator() {
 }
 
 /**
- * Waiting in the elevator
+ * The player waits in the elevator
  */
 
 function enterTheElevator() {
@@ -91,7 +91,7 @@ function waitInTheElevator() {
 }
 
 /**
- * You are sleazy towards the potato
+ * The player is sleazy towards the potato
  */
 
 function seducePotato() {
@@ -108,7 +108,7 @@ function seducePotato() {
 }
 
 /**
- * You try to appease the potato
+ * The player try to appease the potato
  */
 
 function beSleazyTowardsPotato() {
@@ -126,7 +126,7 @@ function beSleazyTowardsPotato() {
 }
 
 /**
- *  Happy ever after
+ *  The player gets a happy ever after
  */
 
 function appeasePotato() {

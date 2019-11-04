@@ -1,5 +1,5 @@
 /** 
- * Your potato is kartoffelvolved into a Supotatis
+ * The players potato is kartoffelvolved into a Supotatis
 */
 
 
@@ -34,7 +34,7 @@
 }
 
 /** 
- *  A nice ending
+ *  The player gets a nice ending
 */
 
 function peaceWithBruseL() {
@@ -51,7 +51,7 @@ function peaceWithBruseL() {
 }
 
 /** 
- *  - No real options
+ *  The player defeats the large potato
 */
 
 function giveDeathBlow() {
@@ -79,7 +79,7 @@ function deafeatBruseL() {
 }
 
 /** 
- *  - No real options
+ *  The player wins the game - highscore
 */
 
 function youWin() {
